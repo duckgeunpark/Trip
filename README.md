@@ -8,8 +8,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/yourusername/TravelLogAI.svg)](https://github.com/yourusername/TravelLogAI/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yourusername/TravelLogAI.svg)](https://github.com/yourusername/TravelLogAI/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/yourusername/TravelLogAI.svg)](https://github.com/duckgeunpark/Trip/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yourusername/TravelLogAI.svg)](https://github.com/duckgeunpark/Trip/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -23,6 +23,7 @@
 ## 📝 목차
 
 - [소개](#about)
+- [포스터 생성 프로세스](#poster_process)
 - [시작하기](#getting_started)
 - [사용 방법](#usage)
 - [배포](#deployment)
@@ -35,7 +36,7 @@
 
 TravelLogAI는 여행자들을 위한 혁신적인 플랫폼입니다. 사용자가 여행 사진을 업로드하면, 인공지능이 이를 분석하여 자동으로 여행 경로를 지도에 시각화하고, 멋진 블로그 포스트를 작성해줍니다. 이를 통해 사용자는 손쉽게 자신의 여행 경험을 기록하고 공유할 수 있습니다.
 
-## 🔄 포스터 생성 프로세스
+## 🔄 포스터 생성 프로세스 <a name = "poster_process"></a>
 
 <details>
 <summary>포스터 생성 프로세스 다이어그램 보기</summary>
