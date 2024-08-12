@@ -28,7 +28,6 @@
 - [사용 방법](#usage)
 - [배포](#deployment)
 - [기술 스택](#built_using)
-- [기여하기](../CONTRIBUTING.md)
 - [개발자](#authors)
 - [감사의 글](#acknowledgement)
 
@@ -92,13 +91,13 @@ graph TD
 1. 리포지토리를 클론합니다
 
     ```
-    git clone https://github.com/yourusername/TravelLogAI.git
+    git clone https://github.com/duckgeunpark/Trip.git
     ```
 
 2. 백엔드 설정:
 
     ```
-    cd TravelLogAI/backend
+    cd Trip/backend
     python -m venv venv
     source venv/bin/activate  # Windows의 경우: venv\Scripts\activate
     pip install -r requirements.txt
@@ -107,21 +106,21 @@ graph TD
 3. 프론트엔드 설정:
 
     ```
-    cd ../frontend
+    cd ../front
     npm install
     ```
 
 4. 백엔드 서버 실행:
 
     ```
-    cd ../backend
+    cd ../back
     uvicorn main:app --reload
     ```
 
 5. 새 터미널에서 프론트엔드 개발 서버 실행:
 
     ```
-    cd TravelLogAI/frontend
+    cd Trip/front
     npm start
     ```
 
@@ -129,12 +128,12 @@ graph TD
 
 ## 🎈 사용 방법 <a name="usage"></a>
 
-1. 회원가입 후 로그인합니다.
-2. '일정 생성하기' 버튼을 클릭하여 새 여행을 시작합니다.
-3. 여행 사진을 업로드합니다.
-4. AI가 사진을 분석하고 여행 경로를 생성할 때까지 기다립니다.
-5. 생성된 블로그 포스트를 검토하고 필요한 경우 편집합니다.
-6. '게시하기' 버튼을 클릭하여 여행 기록을 공유합니다.
+  1. 회원가입 후 로그인합니다.
+  2. '일정 생성하기' 버튼을 클릭하여 새 여행을 시작합니다.
+  3. 여행 사진을 업로드합니다.
+  4. AI가 사진을 분석하고 여행 경로를 생성할 때까지 기다립니다.
+  5. 생성된 블로그 포스트를 검토하고 필요한 경우 편집합니다.
+  6. '게시하기' 버튼을 클릭하여 여행 기록을 공유합니다.
 
 ## 🚀 배포 <a name = "deployment"></a>
 
@@ -143,7 +142,7 @@ graph TD
 1. 프론트엔드 빌드를 생성합니다:
 
     ```
-    cd frontend
+    cd front
     npm run build
     ```
 
@@ -171,7 +170,9 @@ graph TD
 
 ## ✍️ 개발자 <a name = "authors"></a>
 
-- [@duckgeunpark](https://github.com/duckgeunpark) - 아이디어 및 초기 작업
+- [@duckgeunpark](https://github.com/duckgeunpark) - 아이디어 구상 및 프로세스, 전제적인 개발
+
+
 ## 🎉 감사의 글 <a name = "acknowledgement"></a>
 
 - 오픈 소스 커뮤니티의 모든 분들께 감사드립니다.
