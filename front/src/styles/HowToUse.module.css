@@ -1,0 +1,46 @@
+.howToUse {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .steps {
+    list-style-type: none;
+    padding: 0;
+    counter-reset: step-counter;
+  }
+  
+  .step {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .step::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }

@@ -1,0 +1,49 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e6f2ff, #e6fff2);
+  }
+  
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .startButton {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .startButton:hover {
+    background-color: #3a7bd5;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }

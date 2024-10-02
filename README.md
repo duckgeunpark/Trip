@@ -170,8 +170,7 @@ graph TD
 
 ## ✍️ 개발자 <a name = "authors"></a>
 
-- [@duckgeunpark](https://github.com/duckgeunpark) - 아이디어 구상 및 프로세스, 전제적인 개발
-
+- [@duckgeunpark](https://github.com/duckgeunpark)
 
 ## 🎉 감사의 글 <a name = "acknowledgement"></a>
 

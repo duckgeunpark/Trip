@@ -1,0 +1,28 @@
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .text {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .link {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #357abd;
+  }
