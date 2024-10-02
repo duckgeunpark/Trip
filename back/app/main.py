@@ -2,7 +2,7 @@ from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from services.image_processor import process_image
-from services.sort_images_by_capture_date import sort_images_by_capture_date
+from utils.sort_images_by_capture_date import sort_images_by_capture_date
 
 from typing import List
 

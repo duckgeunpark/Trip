@@ -1,6 +1,7 @@
 from fastapi import UploadFile
 from PIL import Image
 import json
+from utils.json_utils import custom_json_serializer
 from PIL.ExifTags import TAGS, GPSTAGS
 import io
 import logging
@@ -8,14 +9,15 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+#PIL Image 객체에서 EXIF 메타데이터를 추출
 def get_image_metadata(image):
-    """이미지의 메타데이터를 추출하는 함수"""
     metadata = {}
     exif = image._getexif()
     if exif:
         metadata = {TAGS.get(key, key): value for key, value in exif.items()}
     return metadata
 
+#메타데이터에서 GPS 정보를 추출
 def get_gps_data(metadata):
     """메타데이터에서 GPS 데이터를 추출하는 함수"""
     gps_info = metadata.get('GPSInfo', {})
@@ -23,31 +25,16 @@ def get_gps_data(metadata):
         return {GPSTAGS.get(key, key): value for key, value in gps_info.items()}
     return None
 
+#메타데이터에서 이미지 촬영 시간을 추출
 def get_capture_time(metadata):
-    """메타데이터에서 촬영 시간을 추출하는 함수"""
     return metadata.get('DateTimeOriginal') or metadata.get('DateTime')
 
-class CustomJSONEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, Image.Image):
-            return f"<Image: {obj.format}, {obj.size}, {obj.mode}>"
-        if hasattr(obj, 'numerator') and hasattr(obj, 'denominator'):
-            return float(obj)
-        if isinstance(obj, (bytes, bytearray)):
-            try:
-                return obj.decode('utf-8')
-            except UnicodeDecodeError:
-                return obj.decode('cp949', errors='replace')
-        return str(obj)
 
-def custom_json_serializer(obj):
-    return json.dumps(obj, cls=CustomJSONEncoder, ensure_ascii=False)
-
+# GPS 좌표를 도(degree) 단위로 변환합니다.
 def convert_to_degrees(value):
     """GPS 좌표를 도(degree) 단위로 변환하는 함수"""
     d, m, s = value
     return d + (m / 60.0) + (s / 3600.0)
-
 
 
 async def process_image(file: UploadFile):
