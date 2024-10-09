@@ -27,3 +27,4 @@ yarn-error.log*
 fastapi_env
 
 __pycache__
+
